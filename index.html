@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm animals</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <header>
+      <h1>Explore heart of farm !</h1> 
+    </header>
+    <h3> Discover the charm of farm life</h3>
+    <hr>
+    <div class="content">
+      <button @click="prevItem">Previous</button>
+      <div class="item">
+        <h2 @click="toggle">{{ currentItem.title }}</h2>
+        <p v-if="showDesc">{{ currentItem.desc }}</p>
+        <img :src="currentItem.img" alt="Image" />
+      </div>
+      <button @click="nextItem">Next</button>
+    </div>  
+    <hr>
+    <footer>
+      <p>Loriana - Tristan - Camille</p>
+    </footer>
+  </div>
+
+  <script src="data/data.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
